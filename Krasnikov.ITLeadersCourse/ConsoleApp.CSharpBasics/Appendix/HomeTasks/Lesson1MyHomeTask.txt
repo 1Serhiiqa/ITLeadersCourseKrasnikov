@@ -1,0 +1,70 @@
+﻿namespace ConsoleApp.CSharpBasics
+{
+    using System;
+    using static ConsoleApp.CSharpBasics.IO.Output;
+    using static ConsoleApp.CSharpBasics.IO.Input;
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Out.WriteLine("program that calculates sum of three integries");
+            
+            int a, b, c;
+            a = 1;
+            b = 2;
+            c = 3;
+
+            int sum = a + b + c;
+
+            Out.WriteLine(a + " + " + b + " + " + c + " = " + (a + b + c));
+
+            Out.WriteLine("program that calculates perimeter and area of the circle");
+
+            double radius = 2.6;
+
+            double circleArea = Math.PI * Math.Pow(radius, 2);
+            double circlePerimeter = 2 * Math.PI * radius;
+
+            Out.WriteLine("Circle arrea is: " + circleArea);
+            Out.WriteLine("Circle arrea is: " + circlePerimeter);
+
+            Out.WriteLine("Calculate sum of three numbers");
+            Out.WriteLine();
+
+            int firstNumber, secondNumber, thirdNumber;
+            firstNumber = secondNumber = thirdNumber = default;
+
+            Out.Write("Input first integer: ");
+            firstNumber = int.Parse(In.ReadLine());
+
+            Out.Write("Input second integer: ");
+            secondNumber = int.Parse(In.ReadLine());
+
+            Out.Write("Input third integer: ");
+            thirdNumber = int.Parse(In.ReadLine());
+
+            sum = 0;
+            sum = firstNumber + secondNumber + thirdNumber;
+
+            Out.WriteLine($"The sum of {firstNumber} + {secondNumber} + {thirdNumber} is {sum}");
+
+            Out.WriteLine("Calculate circle perimeter and area.");
+            Out.WriteLine();
+
+            radius = default;
+            circleArea = 0.0;
+            circlePerimeter = 0.0;
+
+            Out.Write("Input circle radius: ");
+            radius = double.Parse(In.ReadLine());
+
+            circleArea = Math.PI * Math.Pow(radius, 2);
+            circlePerimeter = 2 * Math.PI * radius;
+
+            Out.WriteLine("Circle area is: " + circleArea);
+            Out.WriteLine("Circle perimeter is: " + circlePerimeter);
+
+        }
+    }
+}
