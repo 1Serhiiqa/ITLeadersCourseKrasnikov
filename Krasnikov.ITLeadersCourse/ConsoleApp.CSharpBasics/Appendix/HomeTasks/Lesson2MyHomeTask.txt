@@ -1,0 +1,157 @@
+﻿//Task 1-1. with Console.
+
+
+using System;
+
+namespace ConsoleApp.CSharpBasics
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Try to guess a number between two numbers.");
+
+            int toGuessANumber;
+            const int numberToBeGuessed = 20;
+            const int minBorder = 10;
+            const int maxBorder = 30;
+
+            Console.Write("Input an integer: ");
+            toGuessANumber = int.Parse(Console.ReadLine());
+
+            if (toGuessANumber == numberToBeGuessed)
+            {
+                Console.WriteLine($"You are right! This is {numberToBeGuessed}");
+            }
+            else
+            {
+                if (toGuessANumber < minBorder || toGuessANumber > maxBorder)
+                {
+                    Console.WriteLine("Your number is out of range!");
+                }
+                else
+                {
+                    if (toGuessANumber < numberToBeGuessed)
+                    {
+                        Console.WriteLine("You are wrong! Your number is less!");
+                    }
+                    else if (toGuessANumber > numberToBeGuessed)
+                    {
+                        Console.WriteLine("You are wrong! Your number is grater!");
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}
+
+
+
+
+//Task 1-2 with Out-In .
+
+
+        using static ConsoleApp.CSharpBasics.IO.Input;
+using static ConsoleApp.CSharpBasics.IO.Output;
+
+namespace ConsoleApp.CSharpBasics
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Out.WriteLine("Try to guess a number between two numbers.");
+
+            int guessNumber;
+            const int numberToBeGuessed = 15;
+            const int minimumBorder = 10;
+            const int maximumBorder = 20;
+
+            Out.Write("Input an integer: ");
+            guessNumber = int.Parse(In.ReadLine());
+
+            if (guessNumber == numberToBeGuessed)
+            {
+                Out.WriteLine($"You are right! This is {numberToBeGuessed}");
+            }
+            else
+            {
+                if (guessNumber < minimumBorder || guessNumber > maximumBorder)
+                {
+                    Out.WriteLine("Your number is out of range!");
+                }
+                else
+                {
+                    if (guessNumber < numberToBeGuessed)
+                    {
+                        Out.WriteLine("You are wrong! Your number is less!");
+                    }
+                    else if (guessNumber > numberToBeGuessed)
+                    {
+                        Out.WriteLine("You are wrong! Your number is grater!");
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}
+
+
+
+
+        //CLASSWORK
+
+
+        using System;
+
+namespace ConsoleApp.CSharpBasics
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Try to guess a number between two numbers.");
+
+            int guessNumber;
+            const int numberToBeGuessed = 15;
+            const int minimumBorder = 10;
+            const int maximumBorder = 20;
+
+            Console.Write("Input an integer: ");
+            guessNumber = int.Parse(Console.ReadLine());
+
+            if (guessNumber == numberToBeGuessed)
+            {
+                Console.WriteLine($"You are right! This is {numberToBeGuessed}");
+            }
+            else
+            {
+                if (guessNumber < minimumBorder || guessNumber > maximumBorder)
+                {
+                    Console.WriteLine("Your number is out of range!");
+                }
+                else
+                {
+                    if (guessNumber < numberToBeGuessed)
+                    {
+                        Console.WriteLine("You are wrong! Your number is less!");
+                    }
+                    else if (guessNumber > numberToBeGuessed)
+                    {
+                        Console.WriteLine("You are wrong! Your number is grater!");
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}
+
