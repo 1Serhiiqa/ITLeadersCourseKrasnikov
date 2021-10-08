@@ -1,0 +1,49 @@
+﻿//Task 1.
+
+using System;
+
+namespace ConsoleApp.CSharpBasics
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] integersArray = { 1, 2, 3, 4, 5 };
+
+            Console.WriteLine(integersArray[4]);
+            Console.WriteLine(integersArray[3]);
+            Console.WriteLine(integersArray[2]);
+            Console.WriteLine(integersArray[1]);
+            Console.WriteLine(integersArray[0]);
+       }
+    }
+}
+
+
+/*
+            int[] integerArray2 = new int[integersArray.Length]; // выделяем память массиву
+            
+            int temp;
+            for (int i = 0; i < integersArray.Length - 1; i++)
+            {
+                for (int j = i + 1; j < integersArray.Length; j++)
+                {
+                    if (integersArray[i] > integersArray[j])
+                    {
+                        temp = integersArray[i];
+                        integersArray[i] = integersArray[j];
+                        integersArray[j] = temp;
+                    }
+                }
+            }
+            */
+
+            /*
+            // вывод
+            Console.WriteLine("Вывод отсортированного массива");
+            for (int i = 0; i < integersArray.Length; i++)
+            {
+                Console.WriteLine(integersArray[i]);
+            }
+            Console.ReadLine();
+            */
