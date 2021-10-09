@@ -1,0 +1,23 @@
+﻿/* 
+3-3. Write a program that asks user to input login and password, "Q" for exit and checks them.
+   In case login and password are correct the program prints "You are logged in." and finishes its work.
+   In case login and password are wrong ask to input them again "Password or login are wrong. Input them once more please.".
+   In case "Q" was inputted in login or password the program finishes its work printing "Good bye!"
+   */
+
+   //time 01:04
+
+   public static void CheckToGetAccess(string login, string password, bool isAccessPermited = false)
+   {
+
+   string login = "John", string password = "Smith12345"
+   if (login == null || password == null)
+   {
+   Out.WriteLine("Password or login are wrong. Input them once more please.");
+   return;
+   }
+   CheckToGetAccess ("", "");
+   {
+   Out.WiteLine(isAccessPermitted ? $"Welcome {login}!" : $"{login}, access denied!")
+   }
+   }
