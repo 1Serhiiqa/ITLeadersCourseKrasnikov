@@ -1,0 +1,69 @@
+﻿namespace ConsoleApp.CSharpBasics.Classes
+{
+    using static ConsoleApp.CSharpBasics.IO.Output;
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Car firstCar = new Car();
+
+            Out.WriteLine("First Car`s name is " + firstCar.Name);
+            Out.WriteLine(firstCar.GetIntroduction());
+
+            firstCar.Name = "Audi";
+
+            Out.WriteLine("First Car`s name is " + firstCar.Name);
+            Out.WriteLine(firstCar.GetIntroduction());
+
+            Car secondCar = new Car("BMW");
+
+            Out.WriteLine("Second Car`s name is " + secondCar.Name);
+            Out.WriteLine(secondCar.GetIntroduction());
+
+            Car[] carsArray =
+                {
+                new Car("FORD"),
+                new Car("KIA"),
+                new Car("VW")
+            };
+
+            foreach (var car in carsArray)
+            {
+                Out.WriteLine(car.GetIntroduction());
+            }
+        }
+    }
+
+
+}
+
+
+
+
+
+
+ public class Car
+    {
+        private string maker;
+
+        public string Model
+        {
+            get { return maker; }
+            set { maker = value; }
+        }
+
+        public Car()
+        {
+            maker = "Audi";
+        }
+
+        public Car(string maker)
+        {
+            this.maker = maker;
+        }
+
+        public string GetIndtroduction()
+        {
+            return $"Hi! It`s maker {maker}";
+        }
+    }

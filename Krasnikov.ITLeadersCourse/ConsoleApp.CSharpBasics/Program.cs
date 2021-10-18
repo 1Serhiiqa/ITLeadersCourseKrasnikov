@@ -2,119 +2,37 @@
 
 namespace ConsoleApp.CSharpBasics
 {
+    class Program
 
-    public class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            int x = 4;
-            int y = 0;
+            Console.Write("Input the positive integer: ");
+            double x = Convert.ToDouble(Console.ReadLine());
+            double x = double.Parse(Console.ReadLine());
+            Console.WriteLine($"The square root is: {Sqrt(double x)");
 
-            int z/* = x / y*/;
 
-            //try
-            //{
-            //    z = x / y;
-            //}
-
-            //catch
-            //{
-            //    Console.WriteLine("Exception. Operation of devision by zero is forbidden!");
-            //}
-
-            //finally
-            //{
-            //    Console.WriteLine("Program was finished successfully!");
-            //}
 
 
             //try
             //{
-            //    z = x / y;
+            //public static double Sqrt(double d);             
             //}
 
-            //catch (DivideByZeroException)
-            //{
-            //    Console.WriteLine("Exception. Operation of devision by zero is forbidden!");
-            //}
-
-            //finally
-            //{
-            //    Console.WriteLine("Program was finished successfully!");
-            //}
-
-
-            //try
-            //{
-            //    z = x / y;
-            //}
-
-            //catch (ApplicationException ex)
+            //catch (OperationWithNegativeOrInvalidSymbols ex)
             //{
             //    Console.WriteLine($"Exception: {ex.Message} {Environment.NewLine} {ex.StackTrace}");
-            //}
-
-            //finally
-            //{
-            //    Console.WriteLine("Program was finished successfully!");
-            //}
-
-
-            var intArray = new int[] { 1, 3, 4 };
-
-            //for (int i = 0; i < intArray.Length; i++)
-            //{
-            //    var result = intArray[i] / (intArray.Length - i - 1);
-            //    Console.WriteLine($"Result: {result}");
-            //}
-
-
-            //try
-            //{
-            //    for (int i = 0; i < intArray.Length;i++)
-            //    {
-            //        var result = intArray[i] / (intArray.Length - i - 1);
-            //        Console.WriteLine($"Result: {result}");
             //    }
-            //}
-            //catch (DivideByZeroException ex)
+
+            //finally
             //{
-            //    Console.WriteLine($"Exception: {ex.Message} {Environment.NewLine} {ex.StackTrace}");
+            //    Console.WriteLine("Good bye!");
             //}
-
-
-            try
-            {
-                for (int i = 0; i < intArray.Length;)
-                {
-                    var result = intArray[++i] / (intArray.Length - i);
-                    Console.WriteLine($"Result: {result}");
-                }
-            }
-            catch (DivideByZeroException ex)
-            {
-                Console.WriteLine($"Exception: {ex.Message} {Environment.NewLine} {ex.StackTrace}");
-            }
-
-            catch (IndexOutOfRangeException ex)
-            {
-                Console.WriteLine($"Exception: {ex.Message} {Environment.NewLine} {ex.StackTrace}");
-            }
-
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Exception: {ex.Message} {Environment.NewLine} {ex.StackTrace}");
-            }
-
-            finally
-            {
-                Console.WriteLine($"Unpredictable exception.");
-            }
         }
     }
 }
 
-
-
-
-
+//1.Wiht help of exceptions write a program that takes a positive integer from the console and prints 
+//   the square root of this integer. If the input is negative or invalid print 
+//   "Invalid Number" in the console. In all cases print "Good Bye".
