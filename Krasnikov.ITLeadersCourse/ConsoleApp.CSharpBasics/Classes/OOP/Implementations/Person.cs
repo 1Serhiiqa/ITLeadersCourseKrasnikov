@@ -1,4 +1,5 @@
-﻿using ConsoleApp.CSharpBasics.Classes.OOP.Interfaces;
+﻿using ConsoleApp.CSharpBasics.Classes.OOP.Enums;
+using ConsoleApp.CSharpBasics.Classes.OOP.Interfaces;
 using ConsoleApp.CSharpBasics.Classes.OOP.Structs;
 using System;
 

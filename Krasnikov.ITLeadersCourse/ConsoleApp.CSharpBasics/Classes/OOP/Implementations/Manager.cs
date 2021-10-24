@@ -1,5 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using ConsoleApp.CSharpBasics.Classes.OOP.Enums;
+using ConsoleApp.CSharpBasics.Classes.OOP.Interfaces;
+using ConsoleApp.CSharpBasics.Classes.OOP.Structs;
+using System;
 
 namespace ConsoleApp.CSharpBasics.Classes.OOP.Implementations
 {
@@ -9,6 +11,8 @@ namespace ConsoleApp.CSharpBasics.Classes.OOP.Implementations
         {
             base.Role = EmployeeRoles.Manager;
         }
+
+
 
         public (int created, int inProgress, int closed) AnalyzeTeamWork(Task[] tasks)
         {

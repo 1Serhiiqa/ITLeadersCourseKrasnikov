@@ -1,4 +1,7 @@
-﻿namespace ConsoleApp.CSharpBasics.Classes.OOP.Implementations
+﻿using ConsoleApp.CSharpBasics.Classes.OOP.Enums;
+using ConsoleApp.CSharpBasics.Classes.OOP.Interfaces;
+
+namespace ConsoleApp.CSharpBasics.Classes.OOP.Implementations
 {
     public class Employee : Person, IEmployee
     {

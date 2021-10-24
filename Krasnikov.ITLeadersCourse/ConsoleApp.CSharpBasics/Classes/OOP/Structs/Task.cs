@@ -1,5 +1,4 @@
 ﻿using ConsoleApp.CSharpBasics.Classes.OOP.Enums;
-using System.Threading.Tasks;
 
 namespace ConsoleApp.CSharpBasics.Classes.OOP.Structs
 {

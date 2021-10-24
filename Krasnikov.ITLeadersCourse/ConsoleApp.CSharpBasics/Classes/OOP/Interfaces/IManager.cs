@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+﻿using ConsoleApp.CSharpBasics.Classes.OOP.Structs;
 
 namespace ConsoleApp.CSharpBasics.Classes.OOP.Interfaces
 {

@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using ConsoleApp.CSharpBasics.Classes.OOP.Enums;
+using ConsoleApp.CSharpBasics.Classes.OOP.Interfaces;
+using ConsoleApp.CSharpBasics.Classes.OOP.Structs;
 
 namespace ConsoleApp.CSharpBasics.Classes.OOP.Implementations
 {
