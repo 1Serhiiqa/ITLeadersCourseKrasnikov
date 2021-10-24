@@ -1,8 +1,8 @@
-﻿namespace ConsoleApp.CSharpBasics
-{
-    using static ConsoleApp.CSharpBasics.IO.Output;
-
-    class Program
+﻿//namespace ConsoleApp.CSharpBasics
+//{
+//    using static ConsoleApp.CSharpBasics.IO.Output;
+//
+//    class Program
     {
         static void Main(string[] args)
         {

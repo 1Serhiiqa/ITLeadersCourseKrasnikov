@@ -3,3 +3,25 @@
    "Invalid Number" in the console. In all cases print "Good Bye".
 
 
+   Console.Write("Input the positive integer: ");
+            double x = Convert.ToDouble(Console.ReadLine());
+            double x = double.Parse(Console.ReadLine());
+            Console.WriteLine($"The square root is: {Sqrt(double x)");
+
+
+
+
+            //try
+            //{
+            //public static double Sqrt(double d);             
+            //}
+
+            //catch (OperationWithNegativeOrInvalidSymbols ex)
+            //{
+            //    Console.WriteLine($"Exception: {ex.Message} {Environment.NewLine} {ex.StackTrace}");
+            //    }
+
+            //finally
+            //{
+            //    Console.WriteLine("Good bye!");
+            //}
