@@ -1,19 +1,20 @@
-﻿//using ConsoleApp.WebDriver.Drivers.Interfaces;
-//using OpenQA.Selenium;
+﻿using ConsoleApp.WebDriver.Drivers.Interfaces;
+using OpenQA.Selenium;
+using OpenQA.Selenium.IE;
 
-//namespace ConsoleApp.WebDriver.Drivers.Implementations
-//{
-//    public class IE : IDriver
-//    {
-//        public IWebDriver Setup(string pathToDriver)
-//        {
-//            IWebDriver driver = new IEDriver(pathToDriver);
+namespace ConsoleApp.WebDriver.Drivers.Implementations
+{
+    public class IE : IDriver
+    {
+        public IWebDriver Setup(string pathToDriver)
+        {
+            IWebDriver driver = new InternetExplorerDriver(pathToDriver);
 
-//            driver.Manage().Window.Maximize();
+            driver.Manage().Window.Maximize();
 
-//            return driver;
-//        }
+            return driver;
+        }
 
 
-//    }
-//}
+    }
+}

@@ -10,10 +10,11 @@ namespace ConsoleApp.WebDriver.Drivers.Implementations
         {
             switch (driverType)
             {
+
                 case BrowserType.Chrome:
                     return new Chrome();
-                //case BrowserType.IE:
-                //return new IE();
+                case BrowserType.IE:
+                    return default;
 
                 default:
                     throw new PlatformNotSupportedException($"{driverType} browser is not supported!");

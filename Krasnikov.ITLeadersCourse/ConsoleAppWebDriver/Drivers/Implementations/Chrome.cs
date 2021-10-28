@@ -2,6 +2,8 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
+using System;
+
 namespace ConsoleApp.WebDriver.Drivers.Implementations
 {
     public class Chrome : IDriver
