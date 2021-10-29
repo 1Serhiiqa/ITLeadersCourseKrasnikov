@@ -1,0 +1,40 @@
+﻿body {
+    /* text */
+
+    body
+
+{
+    color: blue;
+}
+
+h1 {
+    color: green;
+}
+
+body {
+    background-color: lightgrey;
+    color: blue;
+}
+
+h1 {
+    background-color: black;
+    color: white;
+}
+
+div {
+    background-color: blue;
+    color: white;
+}
+
+    --txt-c-dark: var(--c-dark);
+    --txt-c-grey: #4f5b70;
+    --txt-c-grey-light: var(--c-grey-light);
+    --txt-c-accent: var(--c-accent);
+    --txt-c-light: var(--c-light);
+    List-style="List-style-type:disc">
+        List-item-1 : bold;
+        List-item-2: italic;
+        <li id="List-item-3" style="color:red">Bohdan</li>
+        <li id="List-item-4" style="list-style:circle">LAZ</li> 
+        <li id="List-item-5">KrAZ</li>
+}
