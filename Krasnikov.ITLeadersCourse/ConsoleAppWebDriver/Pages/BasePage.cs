@@ -3,18 +3,28 @@ using OpenQA.Selenium;
 
 namespace ConsoleApp.WebDriver
 {
-    public class BaseTest
+    public class BasePage
     {
-        public static TPage NavigateTo<TPage>(string url) where TPage : BasePage, new()
-        {
-            WebDriverManager.Driver.Navigate().GoToUrl(url);
+        protected IWebDriver Driver { get; }
 
-            return new TPage();
+        public BasePage()
+        {
+            this.Driver = WebDriverManager.Driver;
         }
 
-        public static void DisposeTest()
+        protected void NavigateBack()
         {
-            WebDriverManager.DisposeDriver();
+            Driver.Navigate().Back();
+        }
+
+        protected IWebElement FindElement(By locator)
+        {
+            return Driver.FindElement(locator);
+        }
+
+        protected IList<IWebElement> FindElements(By locator)
+        {
+            return Driver.FindElements(locator);
         }
     }
 }
