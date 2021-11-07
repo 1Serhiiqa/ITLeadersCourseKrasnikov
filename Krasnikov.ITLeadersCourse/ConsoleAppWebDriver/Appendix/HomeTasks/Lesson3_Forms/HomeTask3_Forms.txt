@@ -6,3 +6,121 @@
 4. Clear Education completed dropdown input and check it out that data was cleared.
 
 Link to Lesson 3 video: https://drive.google.com/file/d/1-6nQ8KhKEucIWyeKwp2Lcl70ZgYGumae/view?usp=sharing
+
+!!!!!!Progtam.cs
+using ConsoleApp.WebDriver.Pages.Lesson3Forms;
+using System;
+using static ConsoleApp.CSharpBasics.IO.Output;
+
+namespace ConsoleApp.WebDriver
+{
+
+    class Program : BaseTest
+    {
+        public readonly static string url = AppDomain.CurrentDomain.BaseDirectory
+            + @"\Appendix\Lessons\Lesson3_Forms\forms.html";
+
+        static void Main(string[] args)
+        {
+            try
+            {
+                var formPage = NavigateTo<FormPage>(url);
+
+                string expectedOption = "PhD";
+
+                formPage.ChooseEducationCompletedOption(expectedOption, true);
+
+                string inputValue = formPage.GetEducationCompletedInput();
+
+                AssertThatOptionIsCorrect(expectedOption, inputValue);
+
+                formPage.ClickEducationCompletedResetButton();
+
+                inputValue = formPage.GetEducationCompletedInput();
+
+                expectedOption = string.Empty;
+
+                AssertThatOptionIsCorrect(expectedOption, inputValue);
+            }
+            catch (Exception)
+            {
+            }
+            finally
+            {
+                DisposeTest();
+            }
+        }
+        private static void AssertThatOptionIsCorrect(string expectedOption, string actualOption)
+        {
+            if (expectedOption != actualOption)
+            {
+                Out.WriteLine($"Expected option {expectedOption} is not equal to actual option {actualOption}");
+            }
+
+            else
+            {
+                Out.WriteLine("Options are equal");
+            }
+        }
+    }
+}
+
+!!!!!!!FormPage.cs
+using OpenQA.Selenium;
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp.WebDriver.Pages.Lesson3Forms
+{
+    public class FormPage : BasePage
+    {
+        private IWebElement EducationCompletedInput => Driver.FindElement(By.CssSelector("input[name='education']"));
+
+        private IList<IWebElement> EducationCompletedOptions => Driver.FindElements(By.CssSelector("dataList#edulevel option"));
+        private IWebElement EducationCompletedResetButton => Driver.FindElement(By.CssSelector("form p input[type='reset']"));
+
+        public void ChooseEducationCompletedOption(string option, bool moveFocus = true)
+        {
+            foreach (var opt in EducationCompletedOptions)
+            {
+                var optionValue = opt.GetAttribute("value");
+
+                if (option.Equals(optionValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    EducationCompletedInput.Clear();
+                    EducationCompletedInput.SendKeys(optionValue);
+
+                    if (moveFocus)
+                    {
+                        EducationCompletedInput.SendKeys(Keys.Tab);
+                    }
+
+                }
+            }
+
+        }
+
+        //task 3-3
+
+        public string GetEducationCompletedInput()
+        {
+            return EducationCompletedInput.GetAttribute("value");
+        }
+
+
+        //task 3-4
+        public FormPage ClickEducationCompletedResetButton()
+
+        {
+            EducationCompletedResetButton.Click();
+
+            return this;
+            //return new FormPage();
+        }
+
+
+    }
+}
+
+
+
