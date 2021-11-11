@@ -63,26 +63,57 @@ namespace ConsoleApp.WebDriver.Pages.Lesson4Select
 
         //1. In Multiple select make a selection of 3 options.
         //2. Get all selected options and check them out if they are all as expected.
-        public void SelectOptionsInMultipleSelect(List<string> names)
+        public void SelectOptionsInMultipleSelect(params string[] options)
         {
+
             var select = new SelectElement(MultipleSelect);
 
-            select.SelectByText();
+
+            foreach (var option in options)
+            {
+                select.SelectByText(option);
+            }
         }
-        public string GetSelectedOptionsInMultipleSelect()
+
+
+        public List<string> GetSelectedOptionsInMultipleSelect()
         {
-            return new SelectElement(MultipleSelect).SelectedOption.Text;
+            var selectedOptions = new List<string>();
+            var options = new SelectElement(MultipleSelect).AllSelectedOptions;
+            foreach (var option in options)
+            {
+                string o = option.Text;
+                selectedOptions.Add(o);
+
+
+            }
+            return selectedOptions;
+
         }
 
         //3. Deselect one option in the multiple select.
-        //4. Get left options form Multiple select and check them if they are as expected.
-        public void SelectOptionsInMultipleSelect(List<string> names)
+
+        public void DeselectOptionsInMultipleSelect(params string[] options)
         {
+
             var select = new SelectElement(MultipleSelect);
 
-            select.SelectByText(List<string> names);
+            foreach (var option in options)
+            {
+                select.DeselectByText(option);
+            }
         }
-        public string GetSelectedOptionsInMultipleSelect()
+
+        //4. Get left options from Multiple select and check them if they are as expected.
+        //line 79
+        //public void SelectOptionsInMultipleSelect(List<string> names)
+        //{
+        //    var select = new SelectElement(MultipleSelect);
+
+        //    select.SelectByText(string select);
+        //    //select.SelectByText(List<string>);
+        //}
+        public string SelectedOption()
         {
             return new SelectElement(MultipleSelect).SelectedOption.Text;
         }
@@ -90,16 +121,16 @@ namespace ConsoleApp.WebDriver.Pages.Lesson4Select
         //5. Deselect all options in the multiple select.
         //6. Check out that all options were deselected.
 
-        public void SelectOptionsInMultipleSelect(List<string> names)
+        public void DeselectOptionsInMultipleSelect(List<string> names)
         {
             var select = new SelectElement(MultipleSelect);
 
-            select.DeselectAll(List<string> names);
+            select.DeselectAll();
         }
-        public string GetSelectedOptionsInMultipleSelect()
-        {
-            return new SelectElement(MultipleSelect).SelectedOption.Text;
-        }
+        //public string GetSelectedOptionsInMultipleSelect()
+        //{
+        //    return new SelectElement(MultipleSelect).SelectedOption.Text;
+        //}
 
 
         //ver.05.11.21

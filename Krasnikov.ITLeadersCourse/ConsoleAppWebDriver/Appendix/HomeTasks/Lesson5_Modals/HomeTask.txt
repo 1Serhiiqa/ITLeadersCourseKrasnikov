@@ -13,4 +13,58 @@
 12. Input empty string
 13. Repeat step 6, 7
 
-Link to Lesson 5 video: https://drive.google.com/file/d/1-Nge2ZKYYduT1JBa5On464duT4SbKts2/view?usp=sharing
+Link to Lesson 5 video: https://drive.google.com/file/d/1-Nge2ZKYYduT1JBa5On464duT4SbKts2/view?usp/
+
+!!!!!!!MY-Program.cs
+using ConsoleApp.WebDriver.Pages.Lesson5Modals;
+using System;
+
+namespace ConsoleApp.WebDriver
+{
+
+    class Program : BaseTest
+    {
+        public readonly static string url = AppDomain.CurrentDomain.BaseDirectory
+            + @"\Appendix\Lessons\Lesson5_Modals\modals.html";
+
+        static void Main(string[] args)
+        {
+
+
+
+            try
+            {
+                ModalsPage modalsPage = NavigateTo<ModalsPage>(url);
+
+                var expectedSubmitEmail = "js@g.com";
+
+                modalsPage.InputSubmitEmail(expectedSubmitEmail);
+
+                var alertMessage = modalsPage.AcceptAlert();
+                var actualSubmitEmail = modalsPage.Get EmailSubmission().Split(":")[1].TrimStart();
+
+                var mes = string.Format("Alert message: {0}", alertMessage);
+                Out.WriteLine(mes);
+
+
+            }
+            catch (Exception)
+            {
+            }
+            finally
+            {
+                DisposeTest();
+            }
+        }
+
+    }
+
+
+
+
+}
+
+
+
+
+
