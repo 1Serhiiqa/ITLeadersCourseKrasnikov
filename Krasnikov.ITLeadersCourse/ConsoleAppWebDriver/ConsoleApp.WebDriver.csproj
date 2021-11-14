@@ -25,12 +25,36 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Appendix\Lessons\Lesson6_AdditionalWindows\FirstWindowPage.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Appendix\Lessons\Lesson6_AdditionalWindows\SecondWindowPage.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Appendix\Lessons\Lesson6_AdditionalWindows\ThirdWindowPage.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Update="Pages\Lesson5Modals\ModalsPage.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Pages\Lesson6AdditionalWindows\FirstWindowPage.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Pages\Lesson6AdditionalWindows\SecondWindowPage.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Pages\Lesson6AdditionalWindows\ThirdWindowPage.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Appendix\HomeTasks\Lesson6_AdditionalWindows\additional-windows.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Appendix\HomeTasks\Lesson6_AdditionalWindows\new-message-page.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Appendix\Lessons\Lesson1_HtmlCSSIntroduction\bug.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -55,6 +79,21 @@
     <None Update="Appendix\Lessons\Lesson5_Modals\modals.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Appendix\Lessons\Lesson6_AdditionalWindows\first-window.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Appendix\Lessons\Lesson6_AdditionalWindows\second-window.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Appendix\Lessons\Lesson6_AdditionalWindows\third-window.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Appendix\HomeTasks\Lesson6_AdditionalWindows\" />
+    <Folder Include="Appendix\HomeTasks\Lesson7_IFrame\" />
+    <Folder Include="AppSettings\Models\" />
   </ItemGroup>
 
 </Project>
