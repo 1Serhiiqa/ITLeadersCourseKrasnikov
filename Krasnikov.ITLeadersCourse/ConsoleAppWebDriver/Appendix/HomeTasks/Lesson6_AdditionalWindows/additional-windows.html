@@ -1,5 +1,6 @@
 ﻿<!doctype html>
 <html>
+
 <head>
     <title>Windows</title>
     <script type="text/javascript">
@@ -8,7 +9,9 @@
         }
 
         function newMsgWin() {
-            var path = location.pathname.substr(0, location.pathname.lastIndexOf("/") + 1) + "new-message-window.html";
+            //var path = location.pathname.substr(0, location.pathname.lastIndexOf("/") + 1) + "new-message-window.html";
+            var path = location.pathname.substr(0, location.pathname.lastIndexOf("/") + 1) + "new-message-page.html";
+
 
             open(path, '_blank', 'width=500,height=200');
         }
@@ -18,6 +21,7 @@
         }
     </script>
 </head>
+
 <body>
     <div id="content" class="content" role="main">
         <h1>Automation Practice Switch Windows</h1>
@@ -39,4 +43,5 @@
         </div>
     </div>
 </body>
+
 </html>
