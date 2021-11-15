@@ -23,17 +23,17 @@ namespace ConsoleApp.WebDriver.Helpers
             WebDriverManager.Driver.SwitchTo().DefaultContent();
         }
 
-        public static string SendKeysAlert()
-        {
-            //var alert = WebDriverManager.Driver.SwitchTo().Alert();
+        //public static string SendKeysAlert()
+        //{
+        //    //var alert = WebDriverManager.Driver.SwitchTo().Alert();
 
-            var alertMessageSendKeys = alert.Text;
-            alert.SendKeys(john@g.com);
+        //    var alertMessageSendKeys = alert.Text;
+        //    alert.SendKeys(john@g.com);
 
 
-            WebDriverManager.Driver.SwitchTo().DefaultContent();
+        //    WebDriverManager.Driver.SwitchTo().DefaultContent();
 
-            return alertMessage;
-        }
+        //    return alertMessage;
+        //}
     }
 }

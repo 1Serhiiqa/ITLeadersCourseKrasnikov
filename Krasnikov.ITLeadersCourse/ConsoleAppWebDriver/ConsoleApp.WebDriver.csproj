@@ -25,6 +25,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Appendix\HomeTasks\Lesson6_AdditionalWindows\AdditionalWindowPage.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Appendix\HomeTasks\Lesson6_AdditionalWindows\AutomationPracticePage.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Appendix\HomeTasks\Lesson6_AdditionalWindows\AutomationPracticeTab.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Appendix\HomeTasks\Lesson6_AdditionalWindows\MessageWindowPage.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Update="Appendix\Lessons\Lesson6_AdditionalWindows\FirstWindowPage.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
@@ -32,6 +44,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Update="Appendix\Lessons\Lesson6_AdditionalWindows\ThirdWindowPage.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="AppSettings\SettingsCongfigurator.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Drivers\WebDriverManager.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Helpers\AlertHelper.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Helpers\WindowHelper.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Update="Pages\Lesson5Modals\ModalsPage.cs">
@@ -49,6 +73,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Appendix\HomeTasks\Lesson#1_HtmlCss\Style.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Appendix\HomeTasks\Lesson#1_HtmlCss\uap-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Appendix\HomeTasks\Lesson6_AdditionalWindows\additional-windows.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -88,11 +118,14 @@
     <None Update="Appendix\Lessons\Lesson6_AdditionalWindows\third-window.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="AppSettings\Files\appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Appendix\HomeTasks\Lesson6_AdditionalWindows\" />
     <Folder Include="Appendix\HomeTasks\Lesson7_IFrame\" />
+    <Folder Include="Appendix\Lessons\Lesson7_IFrame\" />
     <Folder Include="AppSettings\Models\" />
   </ItemGroup>
 

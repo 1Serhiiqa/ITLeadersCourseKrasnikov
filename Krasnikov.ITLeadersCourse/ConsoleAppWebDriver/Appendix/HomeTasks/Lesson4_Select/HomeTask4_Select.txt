@@ -4,7 +4,7 @@ Link to XPath cheetsheet: https://devhints.io/xpath
 1. In Multiple select make a selection of 3 options.
 2. Get all selected options and check them out if they are all as expected.
 3. Deselect one option in the multiple select.
-4. Get left options form Multiple select and check them if they are as expected.
+4. Get left options from Multiple select and check them if they are as expected.
 5. Deselect all options in the multiple select.
 6. Check out that all options were deselected.
 
@@ -24,6 +24,7 @@ using ConsoleApp.WebDriver.Pages.Lesson4Select;
 using System;
 using System.Collections.Generic;
 using static ConsoleApp.CSharpBasics.IO.Output;
+using OpenQA.Selenium;
 
 namespace ConsoleApp.WebDriver
 {
@@ -35,59 +36,49 @@ namespace ConsoleApp.WebDriver
 
         static void Main(string[] args)
         {
-
-
-
+            
+            
+            
             try
             {
                 SelectPage selectPage = NavigateTo<SelectPage>(url);
 
-
                 //1. In Multiple select make a selection of 3 options.
-                List<string> optionsToBeSelected = new List<string> { "Mike", "Jane", "Scott" };
+                List<string> optionsToBeSelected = ("Mike", "Jane", "Scott");
 
-                selectPage.SelectOptionsInMultipleSelect(optionsToBeSelected.ToArray());
-
+                selectPage.SelectOptionsInMultipleSelect(optionsToBeSelected);
 
                 //2. Get all selected options and check them out if they are all as expected.
                 var actualOptions = selectPage.GetSelectedOptionsInMultipleSelect();
 
                 Out.WriteLine($"Expected options: {optionsToBeSelected}; Actual options: {actualOptions}");
 
-
                 //3. Deselect one option in the multiple select.
                 string deElectedOption = "Mike";
-                selectPage.DeselectOptionsInMultipleSelect(deElectedOption);
-
+                selectPage.DeelectedOptionFromMultipleSelect(deElectedOption);
 
                 //4. Get left options form Multiple select and check them if they are as expected.
-                //selectPage.GetSelectedOptionsInMultipleSelect(optionsToBeSelected);
+                selectPage.GetSelectedOptionsFromMultipleSelect(optionsToBeSelected);
 
-                actualOptions = selectPage.GetSelectedOptionsInMultipleSelect();
+                actualOptions = selectPage.GetSelectedOptionsFromMultipleSelect();
 
                 Out.WriteLine($"Expected options: {optionsToBeSelected}; Actual options: {actualOptions}");
 
-                                
-
-                //AssertThatSelectedOptionsAreEqual(optionsToBeSelected, actualOptions);
-
+                AssertThatSelectedOptionsAreEqual(optionsToBeSelected, actualOptions);
 
                 //5.Deselect all options in the multiple select.
-                selectPage.DeselectOptionsInMultipleSelect();
+                selectPage.DeelectedAllOptionsFromMultipleSelect();
 
                 var expectedOption = string.Empty;
 
-
                 //6.Check out that all options were deselected.
-                selectPage.GetSelectedOptionsInMultipleSelect();
+                selectPage.GetSelectedOptionsFromMultipleSelect(optionsToBeSelected);
 
-                actualOptions = selectPage.GetSelectedOptionsInMultipleSelect();
+                actualOptions = selectPage.GetSelectedOptionsFromMultipleSelect();
 
                 Out.WriteLine($"Expected options: {optionsToBeSelected}; Actual options: {actualOptions}");
 
-                //AssertThatSelectedOptionsAreEqual(expectedOption, actualOptions);
-
-
+                AssertThatSelectedOptionsAreEqual(expectedOption, actualOptions);
 
             }
             catch (Exception)
@@ -105,12 +96,6 @@ namespace ConsoleApp.WebDriver
 
 
 }
-
-
-
-
-
-
 
 
 
