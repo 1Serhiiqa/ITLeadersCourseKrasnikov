@@ -4,3 +4,49 @@
 4. Print them in console
 
 Link to Lesson 8 video: https://drive.google.com/file/d/1-kVTOkIvkJ3WbR3F85erF_VrGKn0OW2P/view?usp=sharing
+
+
+//MY version - check with 0:50 video records
+using ConsoleApp.WebDriver.Appendix.HomeTasks.Lesson8_ComplexActions;
+using System;
+using static ConsoleApp.WebDriver.AppSettings.SettingsCongfigurator;
+
+
+namespace ConsoleApp.WebDriver
+{
+    class Program : BaseTest
+    {
+        private static string url = AppDomain.CurrentDomain.BaseDirectory + AppSettings.Urls.Url3Lessin8;
+
+        static void Main(string[] args)
+        {
+            try
+            {
+
+                url = Settings.Urls.Url3Lesson8;
+
+                var mySelectedPage = NavigateTo<MySelectablePage>(url);
+                mySelectedPage.SwitchToDemoFrame();
+
+                message = mySelectedPage.Item1Element()
+                    .GetMessage();
+
+                mySelectedPage.SwitchToSelf();
+
+                //catch (Exception)
+                //{
+                //}
+                //    finally
+                //{
+                //    DisposeTest();
+                //}
+
+
+          }
+       }
+    }
+}
+
+
+
+
