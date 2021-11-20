@@ -1,45 +1,38 @@
-﻿using ConsoleApp.WebDriver.Appendix.HomeTasks.Lesson6_AdditionalWindows;
-using ConsoleApp.WebDriver.Helpers;
+﻿using ConsoleApp.WebDriver.Pages.Lesson7IFrame;
 using System;
-using static ConsoleApp.CSharpBasics.IO.Output;
+using static ConsoleApp.WebDriver.AppSettings.SettingsCongfigurator;
 
 namespace ConsoleApp.WebDriver
 {
 
     class Program : BaseTest
     {
-
+        private static readonly string url = AppDomain.CurrentDomain.BaseDirectory + Settings.Urls.UrlLesson7;
         static void Main(string[] args)
         {
 
 
-
             try
             {
-                var additionalWindowPage = NavigateTo<AdditionalWindowPage>(AppDomain.CurrentDomain.BaseDirectory + Settings.Urls.UrlLesson6);
-                var additionalWindowPageHandle = WindowHelper.AddWindow();
+                var url = AppDomain.CurrentDomain.BaseDirectory + Settings.Urls.UrlLesson7;
 
-                var automationPracticePage = MessageWindowPage.ClickNewMessageWindowLink();
-                //var automationPracticePage = AdditionalWindowPage.ClickNewMessageWindowLink();
-                var automationPracticePageHandle = WindowHelper.AddWindow();
-                WindowHelper.SwitchTo(automationPracticePageHandle);
+                IFramePage iframePage = NavigateTo<IFramePage>(url);
+                //MyFramePage myFramePage = NavigateTo<MyFramePage>(url);
 
+                SecondFramePage secondFramePage = iframePage.SwitchToSecondFrame();
 
+                string name = iframePage.GetNameTextField().Split(": ")[1];
 
-                //var firstWindowPage = NavigateTo<FirstWindowPage>(AppDomain.CurrentDomain.BaseDirectory + Settings.Urls.UrlLesson6);
-                //var secondWindowPage = firstWindowPage.ClickSecondPageLink();
-                //var thirdWindowPage = secondWindowPage.ClickThirdPageLink();
-                //var message = thirdWindowPage.GetMessage();
+                Out.WriteLine($"Name: {name}");
 
-                //Out.WriteLine($"Message: {message}");
-
-                var message = NewBrowserTabText.GetNewBrowserTabText();
-
-                Out.WriteLine($"Message: {message}");
             }
             catch (Exception)
             {
+
+
             }
+
+
             finally
             {
                 DisposeTest();
@@ -53,7 +46,16 @@ namespace ConsoleApp.WebDriver
 
 }
 
-
+//Go to IFramePage
+//1. Go to Frame 2
+//2. Go to Frame 1
+//3. Get Name
+//4. Return to Frame 2
+//5. Get Last Name
+//6. Return to IFramePage window
+//7. Input Full name into input (in format John Smith)
+//8.Click Check button
+//9. Get result and compare it with your one
 
 
 
