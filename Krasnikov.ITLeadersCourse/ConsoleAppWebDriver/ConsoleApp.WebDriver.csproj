@@ -37,6 +37,9 @@
     <Compile Update="Appendix\HomeTasks\Lesson6_AdditionalWindows\MessageWindowPage.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Update="Appendix\HomeTasks\Lesson8_ComplexActions\MySelectablePage.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Update="Appendix\Lessons\Lesson6_AdditionalWindows\FirstWindowPage.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>

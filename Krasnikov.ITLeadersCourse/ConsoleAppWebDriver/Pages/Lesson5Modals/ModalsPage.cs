@@ -107,8 +107,8 @@ namespace ConsoleApp.WebDriver.Pages.Lesson5Modals
 
         public ModalsPage InputSubmitEmail(string submitEmail)
         {
-            this.SubmitEmailInput(submitEmail)
-                //.ClickSubmitEmailButton();
+            SubmitEmailInput(submitEmail);
+            //.ClickSubmitEmailButton();
 
             return this;
         }
