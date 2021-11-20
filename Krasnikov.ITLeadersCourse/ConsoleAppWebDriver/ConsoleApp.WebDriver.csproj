@@ -112,6 +112,9 @@
     <Compile Update="Pages\Lesson7IFrame\IFramePage.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Update="Pages\Lesson7IFrame\SecondFramePage.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Update="Pages\Lesson8ComplexActions\ComplexActionsPage.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>

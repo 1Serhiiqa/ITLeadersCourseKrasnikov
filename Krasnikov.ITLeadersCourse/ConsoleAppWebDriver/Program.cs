@@ -1,5 +1,6 @@
 ﻿using ConsoleApp.WebDriver.Pages.Lesson7IFrame;
 using System;
+using static ConsoleApp.CSharpBasics.IO.Output;
 using static ConsoleApp.WebDriver.AppSettings.SettingsCongfigurator;
 
 namespace ConsoleApp.WebDriver
