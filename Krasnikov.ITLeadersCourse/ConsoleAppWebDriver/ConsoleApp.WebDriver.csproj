@@ -190,7 +190,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Appendix\HomeTasks\Lesson7_IFrame\" />
     <Folder Include="Appendix\Lessons\Lesson7_IFrame\" />
     <Folder Include="AppSettings\Models\" />
   </ItemGroup>
