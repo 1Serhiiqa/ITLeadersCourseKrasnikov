@@ -121,6 +121,9 @@
     <Compile Update="Pages\Lesson8ComplexActions\DroppablePage.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Update="Pages\Lesson9WebDriverWait\WaitPage.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Update="Program.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
@@ -182,6 +185,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Appendix\Lessons\Lesson8_ComplexActions\complex-actions.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Appendix\Lessons\Lesson9_WebDriverWait\wait.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="AppSettings\Files\appsettings.json">

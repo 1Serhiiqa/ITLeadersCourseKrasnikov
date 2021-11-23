@@ -1,49 +1,62 @@
-﻿using OpenQA.Selenium;
+﻿using ConsoleApp.WebDriver.Pages;
+using ConsoleApp.WebDriver.Pages.Lesson7IFrame;
+using OpenQA.Selenium;
 
 namespace ConsoleApp.WebDriver.Appendix.HomeTasks.Lesson7_IFrame
 {
-    //Go to IFramePage
+
     public class MyFramePage : BasePage
     {
-        //1. Go to Frame 2
-        private IWebElement SecondFrameElement => FindElement(By.Id("frame2Wrapper"));
 
-        public MyFramePage SwitchToSecondFrame()
+
+
+
+
+
+
+        //1. Go to Frame 2
+        private IWebElement SecondFrameElement => FindElement(By.Id("frame2"));
+
+        //private IWebElement MyFramePageHeader => FindElement(By.Id("pageHeader"));
+
+        private IWebElement InputUserName => FindElement(By.Id("userName"));
+
+        private IWebElement CheckUserNameButton => FindElement(By.Id("checkUserName"));
+
+        private IWebElement ResultMessage => FindElement(By.Id("output"));
+
+        public SecondFramePage SwitchToSecondFrame()
         {
             Driver.SwitchTo().Frame(SecondFrameElement);
 
-            return new MyFramePage();
+            return new SecondFramePage();
         }
 
-        //2. Go to Frame 1
-        private IWebElement ThirdFrameElement => FindElement(By.Id("innerFrame"));
-
-        public MyFramePage SwitchToThirdFrame()
+        public MyFramePage SwitchToSelf()
         {
-            Driver.SwitchTo().Frame(ThirdFrameElement);
+            Driver.SwitchTo().DefaultContent();
 
-            return new MyFramePage();
+            return this;
         }
 
-        //3. Get Name
+        public MyFramePage InputUserNameField()
+        {
+            Driver.ToString(FullUserName);
 
-        private IWebElement NameTextField => FindElement(By.Id("name"));
+            return this;
+        }
+        public MyFramePage ClickCheckUserNameButton()
+        {
+            CheckUserNameButton.Click();
 
-        public string GetNameTextField() => NameTextField.Text.Split(": ")[1];
+            return this;
+        }
 
+        public string GetResultMessage()
+        {
+            return ResultMessage.Text;
+        }
 
 
     }
 }
-
-
-//Go to IFramePage
-//1. Go to Frame 2
-//2. Go to Frame 1
-//3. Get Name
-//4. Return to Frame 2
-//5. Get Last Name
-//6. Return to IFramePage window
-//7. Input Full name into input (in format John Smith)
-//8.Click Check button
-//9. Get result and compare it with your one
