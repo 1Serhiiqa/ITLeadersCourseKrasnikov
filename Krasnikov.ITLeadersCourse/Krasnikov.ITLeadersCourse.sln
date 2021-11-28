@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp.CSharpBasics", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp.WebDriver", "ConsoleAppWebDriver\ConsoleApp.WebDriver.csproj", "{4C6C3C29-91CB-463F-8DDD-9AFB007E862D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitFramework", "NUnitFramework\NUnitFramework.csproj", "{279C3324-E007-4593-AC66-6A9B9AE7B07F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4C6C3C29-91CB-463F-8DDD-9AFB007E862D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C6C3C29-91CB-463F-8DDD-9AFB007E862D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C6C3C29-91CB-463F-8DDD-9AFB007E862D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{279C3324-E007-4593-AC66-6A9B9AE7B07F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{279C3324-E007-4593-AC66-6A9B9AE7B07F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{279C3324-E007-4593-AC66-6A9B9AE7B07F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{279C3324-E007-4593-AC66-6A9B9AE7B07F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
