@@ -10,5 +10,11 @@ namespace NUnitFramework.AppSettings.Models
 
         public LoggerType Logger { get; set; }
 
+        public PathsModel Paths { get; set; }
+        public class PathsModel
+        {
+            public string ScreenshotsOutput { get; set; }
+        }
+
     }
 }

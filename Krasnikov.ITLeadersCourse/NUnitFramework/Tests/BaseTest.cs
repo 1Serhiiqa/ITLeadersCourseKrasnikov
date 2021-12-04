@@ -1,7 +1,9 @@
 ﻿using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using NUnitFramework.Drivers;
+using NUnitFramework.Helpers;
 using NUnitFramework.Logging;
+using System;
 using static NUnitFramework.AppSettings.SettingsConfigurator;
 
 
@@ -9,7 +11,7 @@ namespace NUnitFramework.Tests
 {
     public class BaseTest
     {
-
+        private static string PathToScreenshots = AppDomain.CurrentDomain.BaseDirectory + Settings.Paths.ScreenshotsOutput;
         private static TestStatus TestStatus => TestContext.CurrentContext.Result.Outcome.Status;
         private static string TestName => TestContext.CurrentContext.Test.Name;
 
@@ -26,6 +28,13 @@ namespace NUnitFramework.Tests
         public void DisposeTest()
         {
             Logger.Log.Info("{0} test finished with status: {1}", TestName, TestStatus.ToString().ToUpper());
+
+            if (TestStatus == TestStatus.Failed)
+            {
+                var screenshotName = Screenshoter.TakeScreenshot(WebDriverManager.Driver, PathToScreenshots, TestName);
+
+                Logger.Log.Info("Screenshot {0} was taken and put to {1}", screenshotName, PathToScreenshots);
+            }
 
             WebDriverManager.DisposeDriver();
         }
